@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBoltCollision : MonoBehaviour {
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //private Collider collider;
+
+    void Start()
+    {
+        //collider = GetComponent<Collider>();
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
