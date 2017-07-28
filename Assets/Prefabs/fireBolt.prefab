@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114196829563372272}
   - component: {fileID: 114388559486817114}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: fireBolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
