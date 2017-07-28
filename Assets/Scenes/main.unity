@@ -323,7 +323,6 @@ GameObject:
   - component: {fileID: 566647989}
   - component: {fileID: 566647994}
   - component: {fileID: 566647993}
-  - component: {fileID: 566647995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -423,19 +422,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &566647995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 566647988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f80c1743992b6849822870cc5d5cc06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capsule: {fileID: 54987799088015332, guid: 5e0d685900f07b349bd410f00200f118, type: 2}
-  speed: -100
 --- !u!1001 &777635136
 Prefab:
   m_ObjectHideFlags: 0
@@ -514,6 +500,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1413842219}
+  - component: {fileID: 1413842220}
   m_Layer: 0
   m_Name: Hands
   m_TagString: Untagged
@@ -534,6 +521,19 @@ Transform:
   m_Father: {fileID: 566647992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1413842220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1413842218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f80c1743992b6849822870cc5d5cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBolt: {fileID: 54987799088015332, guid: 5e0d685900f07b349bd410f00200f118, type: 2}
+  speed: -100
 --- !u!1 &1469063274
 GameObject:
   m_ObjectHideFlags: 0

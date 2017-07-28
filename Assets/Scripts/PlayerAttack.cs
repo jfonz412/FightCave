@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour {
 
     // Require the rocket to be a rigidbody.
     // This way we the user can not assign a prefab without rigidbody
-    public Rigidbody capsule;
+    public Rigidbody fireBolt;
     public float speed;
 
     void Update()
@@ -19,10 +19,10 @@ public class PlayerAttack : MonoBehaviour {
 
     void FireBolt()
     {
-        Rigidbody capsuleClone = (Rigidbody)Instantiate(capsule, transform.position, transform.rotation);
-        capsuleClone.velocity = transform.forward * speed;
+        Rigidbody fireBoltClone = (Rigidbody)Instantiate(fireBolt, transform.position, fireBolt.transform.rotation);
+        fireBoltClone.velocity = transform.forward * speed;
 
         // You can also acccess other components / scripts of the clone
-        capsuleClone.GetComponent<FizzleOut>().SetTime(Time.time);
+        fireBoltClone.GetComponent<FizzleOut>().SetTime(Time.time);
     }
 }
