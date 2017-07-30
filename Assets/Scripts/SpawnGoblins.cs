@@ -17,7 +17,7 @@ public class SpawnGoblins : MonoBehaviour {
     {
         for(int i = 0; i < amount; i++)
         {
-            Instantiate(monster, monster.transform.position, transform.rotation);
+            Instantiate(monster, transform.position, transform.rotation);
             yield return new WaitForSeconds(delay);
         }
     }

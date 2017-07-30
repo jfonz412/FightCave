@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class GoblinMovement : MonoBehaviour {
-    private Transform[] points = new Transform[3];
-    private int destPoint = 0;
+    private Transform[] points = new Transform[4];
+    private int destPoint;
     private NavMeshAgent agent;
 
     void Start()
@@ -13,6 +13,7 @@ public class GoblinMovement : MonoBehaviour {
         points[0] = GameObject.Find("point1").transform;
         points[1] = GameObject.Find("point2").transform;
         points[2] = GameObject.Find("point3").transform;
+        points[3] = GameObject.Find("point4").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.autoBraking = false;//so agent doesn't slow down as it approaches a point
         GoToNextPoint();
@@ -22,6 +23,10 @@ public class GoblinMovement : MonoBehaviour {
     {
         if (points.Length == 0)
             return;
+
+        //pick a random point
+        destPoint = Random.Range(0,3);
+
         // set the agent to go to the currently selected destination
         agent.destination = points[destPoint].position;
 
