@@ -26,11 +26,14 @@ public class PlayerMovement : MonoBehaviour {
     //FUNCTIONS
     void Move()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal");// * Time.deltaTime;
+        float moveVertical = Input.GetAxis("Vertical");// * Time.deltaTime;
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(movement * -speed);
+
+        //experiment
+        rb.AddTorque(transform.up * moveHorizontal * speed, ForceMode.Impulse);
     }
 
     void checkSpin()

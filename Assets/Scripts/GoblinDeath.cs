@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoblinDeath : MonoBehaviour {
     private Health health;
 
+
     void Start()
     {
         health = GetComponent<Health>();
