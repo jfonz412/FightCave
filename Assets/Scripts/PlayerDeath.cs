@@ -9,10 +9,11 @@ public class PlayerDeath : MonoBehaviour {
     {
         health = GetComponent<Health>();
     }
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            //Debug.Log("Taking damage!");
             health.TakeDamage(1);
         }
     }
